@@ -1,4 +1,5 @@
-
+//Name-Kanishka Dhir
+//StudentID-301220757
 let mongoose = require('mongoose');
 
 // Create a model class

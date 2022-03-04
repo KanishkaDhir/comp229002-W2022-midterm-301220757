@@ -1,3 +1,5 @@
+//Name-Kanishka Dhir
+//StudentID-301220757
 // create a reference to the model
 let Movie = require('../models/movie');
 
@@ -32,7 +34,6 @@ module.exports.details = (req, res, next) => {
         }
         else
         {
-            //show the edit view
             res.render('movie/details', {
                 title: 'Movie Details', 
                 movie: movieToShow
@@ -46,12 +47,12 @@ module.exports.displayAddPage = (req, res, next) => {
     
     let newItem=Movie();
 
-  res.render('movie/add_edit',
-  {
+     res.render('movie/add_edit',
+   {
        title:'Add a new movie',
        movie: newItem ,
           
-  })    
+   })    
 
 }
 
@@ -130,7 +131,7 @@ module.exports.processEditPage = (req, res, next) => {
      }
      else
      {
-       //refresh the list
+       
        res.redirect('/movie/list');
      }
   });
@@ -150,7 +151,7 @@ module.exports.performDelete = (req, res, next) => {
        }
        else
        {
-         //refresh the list
+         
          res.redirect('/movie/list');
        }
     });
